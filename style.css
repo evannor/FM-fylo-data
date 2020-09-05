@@ -1,3 +1,16 @@
+/* Variables */
+:root {
+  --primary-gradient: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  --neu-paleblue: hsl(243, 100%, 93%);
+  --neu-grayishblue: hsl(229, 7%, 55%);
+  --neu-darkblue: hsl(228, 56%, 26%);
+  --neu-vdblue: hsl(229, 57%, 11%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -6,12 +19,12 @@
 body {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
-  background: hsl(229, 57%, 11%);
+  background: var(--neu-vdblue);
   background-image: url(img/bg-desktop.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   height: 100vh;
-  color: hsl(243, 100%, 93%);
+  color: var(--neu-paleblue);
 }
 
 h1 {
@@ -33,7 +46,7 @@ h1 {
 /* Style for both containers */
 .left,
 .right {
-  background: hsl(228, 56%, 26%);
+  background: var(--neu-darkblue);
   margin: 1rem;
 }
 
@@ -51,7 +64,7 @@ h1 {
   padding-top: 2rem;
 }
 .left .icons {
-  background: hsl(229, 57%, 11%);
+  background: var(--neu-vdblue);
   padding: 10px;
   border-radius: 5px;
   margin-right: 1rem;
@@ -85,13 +98,9 @@ h1 {
 .progress-bar {
   height: 100%;
   width: 81.5%;
-  color: hsl(243, 100%, 93%);
+  color: var(--neu-paleblue);
   text-align: center;
-  background-image: linear-gradient(
-    to right,
-    hsl(6, 100%, 80%),
-    hsl(335, 100%, 65%)
-  );
+  background-image: var(--primary-gradient);
   border-radius: 5px;
   position: relative;
 }
@@ -99,7 +108,7 @@ h1 {
   content: "";
   width: 10px;
   height: 87%;
-  background: hsl(243, 100%, 93%);
+  background: var(--neu-paleblue);
   border-radius: 50%;
   position: absolute;
   top: 1px;
